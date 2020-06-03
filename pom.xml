@@ -9,13 +9,13 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.malik.ithar</groupId>
-	<artifactId>ecommerce-demo-app</artifactId>
+	<artifactId>security-actuator-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ecommerce-demo-app</name>
+	<name>security-actuator-demo</name>
 	<description>Demo project for Spring Boot rest web-service, sample web-app, security and actuator</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
@@ -56,6 +56,8 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<!-- test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
