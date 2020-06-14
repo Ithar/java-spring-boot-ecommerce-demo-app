@@ -1,5 +1,6 @@
 package com.malik.ithar.ecommercedemoapp.service;
 
+import com.malik.ithar.ecommercedemoapp.model.User;
 import com.malik.ithar.ecommercedemoapp.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +15,9 @@ public class UserService {
 
     public int findTotalUsers() {
         return userRepository.findAll().size();
+    }
+
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 }
