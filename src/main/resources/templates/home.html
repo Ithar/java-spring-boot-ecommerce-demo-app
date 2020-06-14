@@ -9,16 +9,19 @@
 <body>
 <h1>Home Page </h1>
 
+<div th:if="${#httpServletRequest.remoteUser}">
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out" class="btn btn-info" />
+    </form>
+    <h3 th:inline="text">You are logged in as: [[${#httpServletRequest.remoteUser}]]!</h3>
+</div>
+
 <hr/>
-<form th:action="@{/logout}" method="post">
-    <input type="submit" value="Sign Out" class="btn btn-info" />
-</form>
-<h3 th:inline="text">You are logged in as: [[${#httpServletRequest.remoteUser}]]!</h3>
 
 <br/><br/>
 <ul>
     <li>View <a th:href="@{/dashboard}"><b>dashboard</b></a></li>
-    <li>View <a th:href="@{/info}"><b>info</b></a></li>
+    <li>View <a th:href="@{/info}"><b>Info rest endpoint</b></a></li>
     <li>-------------</li>
     <li>View <a th:href="@{/actuator}"><b>actuator</b></a></li>
     <li>View <a th:href="@{/actuator/health}"><b>actuator health</b></a></li>

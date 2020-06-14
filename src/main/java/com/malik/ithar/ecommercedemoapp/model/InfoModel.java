@@ -8,5 +8,6 @@ public class InfoModel {
 
     private LocalDateTime localDateTime;
     private String msg;
+    private int userCount;
 
 }
