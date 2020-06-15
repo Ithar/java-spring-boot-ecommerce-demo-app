@@ -1,6 +1,7 @@
 package com.malik.ithar.ecommercedemoapp.service;
 
 import com.malik.ithar.ecommercedemoapp.model.User;
+import expection.UserNotFoundException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,9 +24,10 @@ public class UserDetailsServiceImpl implements UserDetailsService  {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        User user = userService.findByUsername(username);
-
-        if(user == null){
+        User user;
+        try {
+            user = userService.findByUsername(username);
+        } catch (UserNotFoundException e) {
             throw new UsernameNotFoundException("Invalid username or password.");
         }
 

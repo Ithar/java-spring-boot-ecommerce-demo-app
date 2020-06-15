@@ -2,7 +2,10 @@ package com.malik.ithar.ecommercedemoapp.service;
 
 import com.malik.ithar.ecommercedemoapp.model.User;
 import com.malik.ithar.ecommercedemoapp.repository.UserRepository;
+import expection.UserNotFoundException;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
@@ -17,7 +20,18 @@ public class UserService {
         return userRepository.findAll().size();
     }
 
-    public User findByUsername(String username) {
-        return userRepository.findByUsername(username);
+    public User findByUsername(String username) throws UserNotFoundException {
+
+        List<User> users = userRepository.findByUsername(username);
+
+        if (users.isEmpty()) {
+            throw new UserNotFoundException("The username " + username + " is not found.");
+        }
+
+        if (users.size() != 1) {
+            throw new UserNotFoundException("Too many users with username " + username + "; expecting only one.");
+        }
+
+        return users.get(0);
     }
 }
