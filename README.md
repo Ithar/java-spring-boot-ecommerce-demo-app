@@ -6,6 +6,10 @@ Working with docker-compose to create a webapp with Spring security and mysql ta
 #### Features
 - Spring Security Long page
 - Actuator dashboard 
+- Docker compose 
+    - Web App Service    
+    - DB Service
+    
 
 ## Application Stack
 
@@ -30,19 +34,21 @@ Stack  | version |
     Username: Jane/Password#123
     Role: ROLE_USER
 
-## Application Run
+## Application Run (Docker)
 ```
 cd docker
 docker-compose build 
 docker-compose up  
 
-IntelliJ run com.malik.ithar.security.demo.SecurityDemoApp
+http://localhost:8082/security-actuator-demo-0.0.1-SNAPSHOT/ (WIP)
 ```
 
-## Application URL
+## Application Run (IntelliJ) 
+```
+IntelliJ run com.malik.ithar.security.demo.SecurityDemoApp
 http://localhost:8080/info
 http://localhost:8080/actuator
-
+```
 
 ## Note 
 - https://www.baeldung.com/spring-security-registration-password-encoding-bcryp

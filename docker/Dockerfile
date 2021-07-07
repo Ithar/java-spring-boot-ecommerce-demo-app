@@ -1,13 +1,11 @@
-FROM openjdk:8-alpine
+FROM tomcat:8.0-jre8
 
 MAINTAINER Ithar Malik
 
-RUN mkdir -p /opt/security_app/lib
-
-COPY target/security-actuator-demo-0.0.1-SNAPSHOT.jar /opt/security_app/lib
+COPY target/security-actuator-demo-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
-CMD ["java", "-jar" ,"/opt/security_app/lib/security-actuator-demo-0.0.1-SNAPSHOT.jar"]
+CMD ["catalina.sh", "run"]
 
 
