@@ -1,7 +1,7 @@
-package com.malik.ithar.ecommercedemoapp.controller;
+package com.malik.ithar.security.demo.controller;
 
-import com.malik.ithar.ecommercedemoapp.model.InfoModel;
-import com.malik.ithar.ecommercedemoapp.service.UserService;
+import com.malik.ithar.security.demo.model.InfoModel;
+import com.malik.ithar.security.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

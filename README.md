@@ -33,11 +33,15 @@ Stack  | version |
 ## Application Run
 ```
 cd docker
-docker-compose build  
+docker-compose build 
+docker-compose up  
+
+IntelliJ run com.malik.ithar.security.demo.SecurityDemoApp
 ```
 
 ## Application URL
-http://localhost:8080/home.html
+http://localhost:8080/info
+http://localhost:8080/actuator
 
 
 ## Note 

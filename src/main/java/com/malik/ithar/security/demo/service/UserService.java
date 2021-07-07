@@ -1,7 +1,7 @@
-package com.malik.ithar.ecommercedemoapp.service;
+package com.malik.ithar.security.demo.service;
 
-import com.malik.ithar.ecommercedemoapp.model.User;
-import com.malik.ithar.ecommercedemoapp.repository.UserRepository;
+import com.malik.ithar.security.demo.model.User;
+import com.malik.ithar.security.demo.repository.UserRepository;
 import expection.UserNotFoundException;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package com.malik.ithar.ecommercedemoapp.repository;
+package com.malik.ithar.security.demo.repository;
 
-import com.malik.ithar.ecommercedemoapp.model.UserRole;
+import com.malik.ithar.security.demo.model.UserRole;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

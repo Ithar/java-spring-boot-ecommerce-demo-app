@@ -1,4 +1,4 @@
-package com.malik.ithar.ecommercedemoapp.config;
+package com.malik.ithar.security.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

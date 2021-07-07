@@ -1,4 +1,4 @@
-package com.malik.ithar.ecommercedemoapp.model;
+package com.malik.ithar.security.demo.model;
 
 import javax.persistence.*;
 

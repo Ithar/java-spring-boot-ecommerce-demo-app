@@ -1,4 +1,4 @@
-package com.malik.ithar.ecommercedemoapp.helper;
+package com.malik.ithar.security.demo.helper;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

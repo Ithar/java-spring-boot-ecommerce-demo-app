@@ -1,4 +1,4 @@
-package com.malik.ithar.ecommercedemoapp;
+package com.malik.ithar.security.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

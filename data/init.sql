@@ -10,7 +10,7 @@ CREATE  TABLE users (
   username VARCHAR(45) NOT NULL ,
   password VARCHAR(60) NOT NULL ,
   active TINYINT NOT NULL DEFAULT 1 ,
-  PRIMARY KEY (username));
+  PRIMARY KEY (id));
 
 CREATE TABLE user_roles (
   user_role_id int(11) NOT NULL AUTO_INCREMENT,
