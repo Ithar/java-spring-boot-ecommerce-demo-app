@@ -4,13 +4,14 @@ Demo project for Spring Boot security &amp; actuator
 Working with docker-compose to create a webapp with Spring security and mysql tables.
 
 #### Features
-- Spring Security Long page
-- Actuator dashboard 
+- Spring Security 
+  - Roles: (admin and user) 
+- Actuator links
+- Thymeleaf Login page   
 - Docker compose 
     - Web App Service    
     - DB Service
-    
-
+  
 ## Application Stack
 
 Stack  | version |
@@ -49,6 +50,10 @@ IntelliJ run com.malik.ithar.security.demo.SecurityDemoApp
 http://localhost:8080/info
 http://localhost:8080/actuator
 ```
+
+## Future Enhancements 
+- Style html 
+- Add header navigation
 
 ## Note 
 - https://www.baeldung.com/spring-security-registration-password-encoding-bcryp

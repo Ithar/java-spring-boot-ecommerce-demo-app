@@ -3,30 +3,42 @@
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Spring Security Example</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<h1>Home Page </h1>
 
-<div th:if="${#httpServletRequest.remoteUser}">
-    <form th:action="@{/logout}" method="post">
-        <input type="submit" value="Sign Out" class="btn btn-info" />
-    </form>
-    <h3 th:inline="text">You are logged in as: [[${#httpServletRequest.remoteUser}]]!</h3>
+<div id="loginbox" style="margin-top: 20px;"
+     class="mainbox col-md-4 col-md-offset-1 col-sm-6 col-sm-offset-2">
+
+    <h1>Home Page</h1>
+
+    <div th:if="${#httpServletRequest.remoteUser}">
+        <h3 th:inline="text" style="color:#26b72b">You are logged in as: [[${#httpServletRequest.remoteUser}]]!</h3>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out" class="btn btn-xs btn-info" />
+        </form>
+    </div>
+
+    <hr/>
+
+    <h3>Dashboard</h3>
+    <ul>
+        <li><a th:href="@{/dashboard}"><b>dashboard</b></a></li>
+        <li><a th:href="@{/info}"><b>Info rest endpoint (Admin only)</b></a></li>
+    </ul>
+    <h3>Actuator</h3>
+    <ul>
+        <li><a th:href="@{/actuator}"><b>actuator</b></a></li>
+        <li><a th:href="@{/actuator/health}"><b>actuator health</b></a></li>
+    </ul>
 </div>
-
-<hr/>
-
-<br/><br/>
-<ul>
-    <li>View <a th:href="@{/dashboard}"><b>dashboard</b></a></li>
-    <li>View <a th:href="@{/info}"><b>Info rest endpoint</b></a></li>
-    <li>-------------</li>
-    <li>View <a th:href="@{/actuator}"><b>actuator</b></a></li>
-    <li>View <a th:href="@{/actuator/health}"><b>actuator health</b></a></li>
-
-</ul>
 
 </body>
 </html>
