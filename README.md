@@ -46,6 +46,7 @@ http://localhost:8082/security-actuator-demo-0.0.1-SNAPSHOT/ (WIP)
 
 ## Application Run (IntelliJ) 
 ```
+docker-compose up db 
 IntelliJ run com.malik.ithar.security.demo.SecurityDemoApp
 http://localhost:8080/info
 http://localhost:8080/actuator

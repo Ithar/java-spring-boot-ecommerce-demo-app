@@ -31,12 +31,16 @@
     <h3>Dashboard</h3>
     <ul>
         <li><a th:href="@{/dashboard}"><b>dashboard</b></a></li>
-        <li><a th:href="@{/info}"><b>Info rest endpoint (Admin only)</b></a></li>
+        <li><a th:href="@{/api/v1/battle}"><b>Info rest endpoint (Admin only)</b></a></li>
     </ul>
     <h3>Actuator</h3>
     <ul>
-        <li><a th:href="@{/actuator}"><b>actuator</b></a></li>
-        <li><a th:href="@{/actuator/health}"><b>actuator health</b></a></li>
+        <li><a th:href="@{/actuator}"><b>Actuator</b></a></li>
+        <li><a th:href="@{/actuator/health}"><b>Health</b></a></li>
+        <li><a th:href="@{/actuator/info}"><b>Info</b></a></li>
+        <li><a th:href="@{/actuator/env}"><b>Configurable Environment</b></a></li>
+        <li><a th:href="@{/actuator/beans}"><b>Beans</b></a></li>
+        <li><a th:href="@{/actuator/mappings}"><b>Mappings</b></a></li>
     </ul>
 </div>
 
